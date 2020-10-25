@@ -1,6 +1,5 @@
-body {
-	margin: 0;
-	padding: 0;
+.with-background {
+	margin: auto;
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
@@ -11,25 +10,36 @@ body {
 /* header */
 #header {
 	padding: 2em;
-	background: rgb(0,0,0);
+	background: #000;
 	color: #fff;
+    transition: all 1s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
-/*@media screen and (min-width: 700px) {*/
-/*	#header {*/
-/*		!*padding: 2em;*!*/
-/*		!*background: rgb(0,0,0);*!*/
-/*		color: yellow;*/
-/*	}*/
-/*}*/
+@media screen and (max-width: 450px) {
+	#header {
+		visibility: hidden;
+	}
+}
 
-
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 .navbar {
 	float: right;
 	display: flex;
+    margin: auto 1em;
+    padding: .5em;
 }
 
 .navbar .item {
-	margin: 0 1em;
+	margin: auto 1em;
 	text-align: center;
 	text-decoration: none;
     cursor: pointer;
@@ -143,6 +153,12 @@ body {
 	/*background: linear-gradient(172deg, rgba(1,1,1,1) 53%, rgba(255,255,255,1) 53%);*/
     /*padding: 0 21em;*/
     margin: auto;
+    max-width: 800px;
+    width: 90%;
+}
+
+section {
+    margin: 2em auto;
     max-width: 800px;
     width: 90%;
 }

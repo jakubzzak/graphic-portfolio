@@ -23,10 +23,13 @@ if (window.innerWidth < 350) {
 let isMobile = false;
 window.addEventListener('resize', function () {
   isMobile = window.innerWidth <= 450;
+  if (isMobile) {
+    header.hidden = true;
+  }
 })
 
 // calculate landing page high
-let homeHeight = window.innerHeight - header.offsetHeight;
+let homeHeight = window.innerHeight;
 landingScreen.style.height = homeHeight + "px";
 portrait.style.paddingTop = homeHeight / 2 - portrait.offsetHeight / 2  + "px"
 
@@ -91,6 +94,22 @@ let toggleNav = function () {
   }
 
 }
+
+// computer header dense on scroll
+window.onscroll = function () {
+  if (!isMobile) {
+    if (window.pageYOffset > 300 || document.documentElement.scrollTop > 300){
+      header.style.padding = '.5em';
+      document.getElementById("computer_logo").style.width = '30px';
+      document.getElementById("computer_logo").style.marginLeft = '1em';
+
+    } else {
+      header.style.padding = '2em';
+      document.getElementById("computer_logo").style.width = '50px';
+      document.getElementById("computer_logo").style.marginLeft = '2em';
+    }
+  }
+};
 
 let scrollOnTop = function () {
   window.scrollTo({

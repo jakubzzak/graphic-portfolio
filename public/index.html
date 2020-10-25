@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css"/>
-  <link rel="stylesheet" type="text/css" href="cardStyles.css"/>
-  <link rel="stylesheet" type="text/css" href="buttonStyles.css"/>
-  <link rel="stylesheet" type="text/css" href="blogStyles.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/cardStyles.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/buttonStyles.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/blogStyles.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/parallax.css"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>jakubzzak</title>
 </head>
 <body>
+<!--<div id='stars'></div>-->
+<!--<div id='stars2'></div>-->
+<!--<div id='stars3'></div>-->
 <div id="nav-cover"
      style="
 		 	position: fixed;
@@ -31,7 +35,7 @@
 		 	z-index: 1000;
 		 	cursor:pointer;
 			">
-  <img style="border-radius: 5px; border: solid white 1px" src="assets/icons/nav-mobile-icon_black-bg.svg"
+  <img style="border-radius: 5px; border: solid white 1px" src="../assets/icons/nav-mobile-icon_black-bg.svg"
        onclick="toggleNav()">
 </div>
 
@@ -43,12 +47,12 @@
 		 	z-index: 1000;
 		 	cursor:pointer;
 			">
-  <img src="assets/icons/close_nav-mobile-icon_transparent-black.svg" onclick="toggleNav()">
+  <img src="../assets/icons/close_nav-mobile-icon_transparent-black.svg" onclick="toggleNav()">
 </div>
 
-<div id="header" class="border">
+<div id="header">
 			<span class="logo">
-				<img src="assets/logo.svg" onclick="scrollOnTop()">
+				<img id="computer_logo" src="../assets/personal/logo.svg" onclick="scrollOnTop()" style="cursor: pointer">
 			</span>
   <span id="navbarComputer" class="navbar computer">
 				<a class="item" onclick="scrollToSection('aboutMe')">about me</a>
@@ -60,7 +64,7 @@
 </div>
 <div id="navMobileMenu" class="nav-mobile">
   <div style="right: 0; left: 0; text-align: center">
-    <img src="assets/portrait.jpeg" alt="portrait" width="150">
+    <img src="../assets/personal/logo.svg" alt="portrait" width="150">
     <h3 style="padding: 1em" class="">
       Jakub Žák
     </h3>
@@ -75,17 +79,17 @@
       <div id="nav-social-border"></div>
       <span style="padding-top: 1em">
         <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none">
-          <img src="assets/icons/facebook-transparent.svg" alt="facebook" width="24">
+          <img src="../assets/icons/facebook-transparent.svg" alt="facebook" width="24">
         </a>
         <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
            style="text-decoration: none">
-          <img src="assets/icons/linkedin-transparent.svg" alt="linkedin" width="24">
+          <img src="../assets/icons/linkedin-transparent.svg" alt="linkedin" width="24">
         </a>
         <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none">
-          <img src="assets/icons/gmail-transparent.svg" alt="gmail" width="24">
+          <img src="../assets/icons/gmail-transparent.svg" alt="gmail" width="24">
         </a>
         <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank" style="text-decoration: none">
-          <img src="assets/icons/goodreads-transparent.svg" alt="goodreads" width="24">
+          <img src="../assets/icons/goodreads-transparent.svg" alt="goodreads" width="24">
         </a>
       </span>
     </li>
@@ -94,48 +98,50 @@
 <main id="main">
   <div id="home" class="portrait">
     <div id="portrait">
-      <img class="face" src="assets/portrait.jpeg" alt="portrait" width="150">
+      <img class="face" src="../assets/personal/portrait.jpeg" alt="portrait" width="150">
     </div>
-    <h3 class="">
+    <h1 class="" style="font-family: 'Chalkduster', fantasy">
       Jakub Žák
-    </h3>
+    </h1>
     <div class="social">
       <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none">
-        <img src="assets/icons/facebook-transparent.svg" alt="facebook" width="32">
+        <img src="../assets/icons/facebook-transparent.svg" alt="facebook" width="32">
       </a>
       <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
          style="text-decoration: none">
-        <img src="assets/icons/linkedin-transparent.svg" alt="linkedin" width="32">
+        <img src="../assets/icons/linkedin-transparent.svg" alt="linkedin" width="32">
       </a>
       <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none">
-        <img src="assets/icons/gmail-transparent.svg" alt="gmail" width="32">
+        <img src="../assets/icons/gmail-transparent.svg" alt="gmail" width="32">
       </a>
       <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank" style="text-decoration: none">
-        <img src="assets/icons/goodreads-transparent.svg" alt="goodreads" width="32">
+        <img src="../assets/icons/goodreads-transparent.svg" alt="goodreads" width="32">
       </a>
     </div>
   </div>
-  <div id="empty" class="section">
+  <section id="empty" class="">
 
+  </section>
+  <div class="with-background">
+    <section id="aboutMe">
+      <h3 class="section-title">
+        Hey!
+      </h3>
+      <div class="section-content">
+        <p>My name is Jakub Žák and I come from Slovakia.<br/>
+          I am a technology enthusiast specializing in software development,
+          currently working as a junior developer for <a href='https://www.uteg.sk/'>UnitedTechnologies.</a><br/>
+          Feel free to get in touch with me or check out my work and skills below.
+        </p>
+      </div>
+    </section>
   </div>
-  <div id="aboutMe" class="section">
-    <h3 class="section-title">
-      Hey!
-    </h3>
-    <div class="section-content">
-      <p>My name is Jakub Žák and I come from Slovakia.<br/>
-        I am a technology enthusiast specializing in software development,
-        currently working as a junior developer for <a href={'https://www.uteg.sk/'}>UnitedTechnologies.</a><br/>
-        Feel free to get in touch with me or check out my work and skills below.
-      </p>
-    </div>
-  </div>
-  <div id="timeline" class="section">
+  <section id="timeline" class="">
     <h3 class="section-title">
       Timeline
     </h3>
-  </div>
-  <div id="projects" class="section">
+  </section>
+  <section id="projects" class="">
     <h3 class="section-title">
       Projects
     </h3>
@@ -143,7 +149,7 @@
       <div class="card-group">
 
         <div class="card with-cover">
-<!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
+          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
           <div class="cover acadsys"></div>
           <h3 class="title">
             Acadsys
@@ -162,7 +168,7 @@
         </div>
         <div class="card with-cover">
           <div class="cover camasys"></div>
-<!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
+          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
           <h3 class="title">
             Camasys
           </h3>
@@ -173,13 +179,13 @@
             project description
           </div>
           <div class="actions">
-            <a href="https://www.acadsys.com" class="button effect-raise">
+            <a href="https://www.camasys.com" class="button effect-raise">
               Visit
             </a>
           </div>
         </div>
         <div class="card with-cover">
-<!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
+          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
           <div class="cover rentalport"></div>
           <h3 class="title">
             Rentalport
@@ -191,13 +197,13 @@
             project description
           </div>
           <div class="actions">
-            <a class="button effect-raise">
+            <a href="https://www.rentalport.com" class="button effect-raise">
               Visit
             </a>
           </div>
         </div>
         <div class="card with-cover">
-<!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
+          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
           <div class="cover cybik"></div>
           <h3 class="title">
             Cybik
@@ -209,105 +215,107 @@
             project description
           </div>
           <div class="actions">
-            <a class="button effect-raise">
+            <a href="https://www.cybik.sk" class="button effect-raise">
               Visit
             </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div id="blog" class="section">
-    <h3 class="section-title">
-      Blog
-    </h3>
-    <div class="section-content">
+  </section>
+  <div class="with-background">
+    <section id="blog" class="">
+      <h3 class="section-title">
+        Blog
+      </h3>
+      <div class="section-content">
 
-      <div class="slide-container">
+        <div class="slide-container">
 
-        <!-- BUTTONS (input/labels) -->
-        <input type="radio" name="slider" id="slide-1-trigger" class="trigger" checked>
-        <label class="btn" for="slide-1-trigger"></label>
-        <input type="radio" name="slider" id="slide-2-trigger" class="trigger">
-        <label class="btn" for="slide-2-trigger"></label>
-        <input type="radio" name="slider" id="slide-3-trigger" class="trigger">
-        <label class="btn" for="slide-3-trigger"></label>
-        <input type="radio" name="slider" id="slide-4-trigger" class="trigger">
-        <label class="btn" for="slide-4-trigger"></label>
+          <!-- BUTTONS (input/labels) -->
+          <input type="radio" name="slider" id="slide-1-trigger" class="trigger" checked>
+          <label class="btn" for="slide-1-trigger"></label>
+          <input type="radio" name="slider" id="slide-2-trigger" class="trigger">
+          <label class="btn" for="slide-2-trigger"></label>
+          <input type="radio" name="slider" id="slide-3-trigger" class="trigger">
+          <label class="btn" for="slide-3-trigger"></label>
+          <input type="radio" name="slider" id="slide-4-trigger" class="trigger">
+          <label class="btn" for="slide-4-trigger"></label>
 
-        <!-- SLIDES -->
-        <div class="slide-wrapper">
-          <div id="slide-role">
-            <div class="slide slide-1">
-              <div class="grid-container">
-                <h3 class="slide-title">
-                  Why to become a programmer?
-                </h3>
-                <div class="slide-content">
-                  Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
-                  paid for it? That is nothing close to being a programmer like..
-                </div>
-                <div class="slide-action">
-                  <a class="button effect-slide rounded text white">
-                    Read more
-                  </a>
+          <!-- SLIDES -->
+          <div class="slide-wrapper">
+            <div id="slide-role">
+              <div class="slide slide-1">
+                <div class="grid-container">
+                  <h3 class="slide-title">
+                    Why to become a programmer?
+                  </h3>
+                  <div class="slide-content">
+                    Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
+                    paid for it? That is nothing close to being a programmer like..
+                  </div>
+                  <div class="slide-action">
+                    <a class="button effect-slide rounded text white">
+                      Read more
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="slide slide-2">
-              <div class="grid-container">
-                <h3 class="slide-title">
-                  Why to become a programmer?
-                </h3>
-                <div class="slide-content">
-                  Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
-                  paid for it? That is nothing close to being a programmer like..
-                </div>
-                <div class="slide-action">
-                  <a class="button effect-slide rounded text white">
-                    Read more
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="slide slide-3">
-              <div class="grid-container">
-                <h3 class="slide-title">
-                  Why to become a programmer?
-                </h3>
-                <div class="slide-content">
-                  Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
-                  paid for it? That is nothing close to being a programmer like..
-                </div>
-                <div class="slide-action">
-                  <a class="button effect-slide rounded text white">
-                    Read more
-                  </a>
+              <div class="slide slide-2">
+                <div class="grid-container">
+                  <h3 class="slide-title">
+                    Why to become a programmer?
+                  </h3>
+                  <div class="slide-content">
+                    Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
+                    paid for it? That is nothing close to being a programmer like..
+                  </div>
+                  <div class="slide-action">
+                    <a class="button effect-slide rounded text white">
+                      Read more
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="slide slide-4">
-              <div class="grid-container">
-                <h3 class="slide-title">
-                  Why to become a programmer?
-                </h3>
-                <div class="slide-content">
-                  Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
-                  paid for it? That is nothing close to being a programmer like..
+              <div class="slide slide-3">
+                <div class="grid-container">
+                  <h3 class="slide-title">
+                    Why to become a programmer?
+                  </h3>
+                  <div class="slide-content">
+                    Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
+                    paid for it? That is nothing close to being a programmer like..
+                  </div>
+                  <div class="slide-action">
+                    <a class="button effect-slide rounded text white">
+                      Read more
+                    </a>
+                  </div>
                 </div>
-                <div class="slide-action">
-                  <a class="button effect-slide rounded text white">
-                    Read more
-                  </a>
+              </div>
+              <div class="slide slide-4">
+                <div class="grid-container">
+                  <h3 class="slide-title">
+                    Why to become a programmer?
+                  </h3>
+                  <div class="slide-content">
+                    Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
+                    paid for it? That is nothing close to being a programmer like..
+                  </div>
+                  <div class="slide-action">
+                    <a class="button effect-slide rounded text white">
+                      Read more
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
-  <div id="gallery" class="section">
+  <section id="gallery" class="">
     <h3 class="section-title">
       Galery
     </h3>
@@ -327,8 +335,8 @@
     <h6 class="section-subtitle">
       <a id="toggleGallery" class="button effect-raise" onclick="toggleGallery()">show</a>
     </h6>
-  </div>
-  <div id="contact" class="section">
+  </section>
+  <div id="contact" class="" style="background: black; color: white; padding: 0 1em 3em 1em;">
     <h3 class="section-title">
       Contact
     </h3>
@@ -336,20 +344,25 @@
       <p>
         Don't hesitate to contact me via social media listed down below!
       </p>
-      <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none">
-        <img src="assets/icons/facebook.svg" alt="facebook" width="32">
+      <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none; padding: .5em">
+        <img src="../assets/icons/facebook.svg" alt="facebook" width="32">
+      </a>
+      <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none; padding: .5em">
+        <img src="../assets/icons/gmail.svg" alt="gmail" width="32">
       </a>
       <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
-         style="text-decoration: none">
-        <img src="assets/icons/linkedin.svg" alt="linkedin" width="32">
+         style="text-decoration: none; padding: .5em">
+        <img src="../assets/icons/linkedin.svg" alt="linkedin" width="32">
       </a>
-      <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none">
-        <img src="assets/icons/gmail.svg" alt="gmail" width="32">
-      </a>
+    </div>
+    <div class="section-content">
+      <p style="font-family: 'Chalkduster', fantasy">
+        “If you set your goals ridiculously high and it's a failure,<br> you will fail above everyone else's success.” - James Cameron
+      </p>
     </div>
   </div>
 </main>
-<script src="../navbar.js"></script>
-<script src="main.js"></script>
+<script src="../main.js"></script>
+<script src="../scripts/stars.js"></script>
 </body>
 </html>

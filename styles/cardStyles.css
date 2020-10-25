@@ -24,9 +24,9 @@
     width: 350px;
     height: 400px;
 }
-@media screen and (max-width: 350px){
+@media screen and (max-width: 375px){
     .card.with-cover {
-        width: 80%;
+        width: 90%;
         height: 100%;
         max-width: 350px;
         max-height: 400px;
