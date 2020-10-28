@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
-  <link rel="stylesheet" type="text/css" href="../styles/cardStyles.css"/>
-  <link rel="stylesheet" type="text/css" href="../styles/buttonStyles.css"/>
-  <link rel="stylesheet" type="text/css" href="../styles/blogStyles.css"/>
-  <link rel="stylesheet" type="text/css" href="../styles/parallax.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/cardStyles.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/buttonStyles.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/blogStyles.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/parallax.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/timeline.css"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>jakubzzak</title>
 </head>
 <body>
-<!--<div id='stars'></div>-->
-<!--<div id='stars2'></div>-->
-<!--<div id='stars3'></div>-->
 <div id="nav-cover"
      style="
 		 	position: fixed;
@@ -35,7 +33,7 @@
 		 	z-index: 1000;
 		 	cursor:pointer;
 			">
-  <img style="border-radius: 5px; border: solid white 1px" src="../assets/icons/nav-mobile-icon_black-bg.svg"
+  <img style="border-radius: 5px; border: solid white 1px" src="assets/icons/nav-mobile-icon_black-bg.svg"
        onclick="toggleNav()">
 </div>
 
@@ -47,49 +45,52 @@
 		 	z-index: 1000;
 		 	cursor:pointer;
 			">
-  <img src="../assets/icons/close_nav-mobile-icon_transparent-black.svg" onclick="toggleNav()">
+  <img src="assets/icons/close_nav-mobile-icon_transparent-black.svg" onclick="toggleNav()">
 </div>
 
 <div id="header">
-			<span class="logo">
-				<img id="computer_logo" src="../assets/personal/logo.svg" onclick="scrollOnTop()" style="cursor: pointer">
-			</span>
+  <span class="logo">
+    <img id="computer_logo" src="assets/personal/logo.svg" onclick="scrollOnTop()" style="cursor: pointer">
+  </span>
+  <span id="nick" hidden>jakubzzak</span>
   <span id="navbarComputer" class="navbar computer">
-				<a class="item" onclick="scrollToSection('aboutMe')">about me</a>
-				<a class="item" onclick="scrollToSection('timeline')">timeline</a>
-				<a class="item" onclick="scrollToSection('projects')">projects</a>
-				<a class="item" onclick="scrollToSection('blog')">blog</a>
-				<a class="item" onclick="scrollToSection('contact')">contact</a>
-			</span>
+    <a class="item" onclick="scrollToSection('aboutMe')">About me</a>
+    <a class="item" onclick="scrollToSection('timeline')">Timeline</a>
+    <a class="item" onclick="scrollToSection('projects')">Projects</a>
+    <a class="item" onclick="scrollToSection('blog')">Blog</a>
+    <a class="item" onclick="scrollToSection('gallery')">Gallery</a>
+    <a class="item" onclick="scrollToSection('contact')">Contact</a>
+  </span>
 </div>
 <div id="navMobileMenu" class="nav-mobile">
   <div style="right: 0; left: 0; text-align: center">
-    <img src="../assets/personal/logo.svg" alt="portrait" width="150">
+    <img src="assets/personal/logo.svg" alt="portrait" width="150">
     <h3 style="padding: 1em" class="">
       Jakub Žák
     </h3>
   </div>
-  <p><a onclick="scrollToSection('aboutMe')">about me</a></p>
+  <p><a onclick="scrollToSection('aboutMe')">About me</a></p>
   <p><a onclick="scrollToSection('timeline')">timeline</a></p>
-  <p><a onclick="scrollToSection('projects')">projects</a></p>
-  <p><a onclick="scrollToSection('blog')">blog</a></p>
-  <p><a onclick="scrollToSection('contact')">contact</a></p>
+  <p><a onclick="scrollToSection('projects')">Projects</a></p>
+  <p><a onclick="scrollToSection('blog')">Blog</a></p>
+  <p><a onclick="scrollToSection('gallery')">Gallery</a></p>
+  <p><a onclick="scrollToSection('contact')">Contact</a></p>
   <ul>
     <li class="nav-social">
       <div id="nav-social-border"></div>
       <span style="padding-top: 1em">
         <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none">
-          <img src="../assets/icons/facebook-transparent.svg" alt="facebook" width="24">
+          <img src="assets/icons/facebook-transparent.svg" alt="facebook" width="24">
         </a>
         <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
            style="text-decoration: none">
-          <img src="../assets/icons/linkedin-transparent.svg" alt="linkedin" width="24">
+          <img src="assets/icons/linkedin-transparent.svg" alt="linkedin" width="24">
         </a>
         <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none">
-          <img src="../assets/icons/gmail-transparent.svg" alt="gmail" width="24">
+          <img src="assets/icons/gmail-transparent.svg" alt="gmail" width="24">
         </a>
         <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank" style="text-decoration: none">
-          <img src="../assets/icons/goodreads-transparent.svg" alt="goodreads" width="24">
+          <img src="assets/icons/goodreads-transparent.svg" alt="goodreads" width="24">
         </a>
       </span>
     </li>
@@ -98,24 +99,24 @@
 <main id="main">
   <div id="home" class="portrait">
     <div id="portrait">
-      <img class="face" src="../assets/personal/portrait.jpeg" alt="portrait" width="150">
+      <img class="face" src="assets/personal/portrait.jpeg" alt="portrait" width="150">
     </div>
     <h1 class="" style="font-family: 'Chalkduster', fantasy">
       Jakub Žák
     </h1>
     <div class="social">
       <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none">
-        <img src="../assets/icons/facebook-transparent.svg" alt="facebook" width="32">
+        <img src="assets/icons/facebook-transparent.svg" alt="facebook" width="32">
       </a>
       <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
          style="text-decoration: none">
-        <img src="../assets/icons/linkedin-transparent.svg" alt="linkedin" width="32">
+        <img src="assets/icons/linkedin-transparent.svg" alt="linkedin" width="32">
       </a>
       <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none">
-        <img src="../assets/icons/gmail-transparent.svg" alt="gmail" width="32">
+        <img src="assets/icons/gmail-transparent.svg" alt="gmail" width="32">
       </a>
       <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank" style="text-decoration: none">
-        <img src="../assets/icons/goodreads-transparent.svg" alt="goodreads" width="32">
+        <img src="assets/icons/goodreads-transparent.svg" alt="goodreads" width="32">
       </a>
     </div>
   </div>
@@ -128,37 +129,280 @@
         Hey!
       </h3>
       <div class="section-content">
-        <p>My name is Jakub Žák and I come from Slovakia.<br/>
-          I am a technology enthusiast specializing in software development,
-          currently working as a junior developer for <a href='https://www.uteg.sk/'>UnitedTechnologies.</a><br/>
-          Feel free to get in touch with me or check out my work and skills below.
+        <p>My name is Jakub Zak and I am a technology enthusiast based in Bratislava, Slovakia. Currently, I am working
+          as a junior software developer for <a href='https://www.uteg.sk/'>UnitedTechnologies</a>. Please feel free to
+          check out my work below and reach out to me with any questions or comments you may have.
         </p>
       </div>
     </section>
   </div>
-  <section id="timeline" class="">
-    <h3 class="section-title">
+
+
+  <div id="timeline">
+    <h3 class="section-title inverted">
       Timeline
     </h3>
-  </section>
+    <div class="section-content">
+      <ul>
+        <li>
+          <div class="timeline-card">
+            <h2>
+              High school graduation
+            </h2>
+            <h5>
+              <time>May, 2018</time>
+            </h5>
+            <p>
+              Successfully graduated from high school, took final exam in mathematics, English and informatics
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-card">
+            <h2>
+              Accepted to collage
+            </h2>
+            <h5>
+              <time>September, 2018 - present</time>
+            </h5>
+            <p>
+              Kicked off a daily study program: Applied informatics
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-card">
+            <h2>
+              Work and travel program
+            </h2>
+            <h5>
+              <time>June - September, 2019</time>
+            </h5>
+            <p>
+              Two and a half months of daily interaction with people, two weeks of traveling on the east coast
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-card">
+            <h2>
+              Junior fullstack developer
+            </h2>
+            <h5>
+              <time>October, 2019 - present</time>
+            </h5>
+            <p>
+              Working on web apps using JS and Java
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="with-background">
+    <section id="experience" class="">
+      <h3 class="section-title">
+        Experience
+      </h3>
+      <div class="section-content">
+        <div class="card-group">
+          <div class="card" style="border: white; width: 300px">
+            <h5 class="list-title">
+              School
+            </h5>
+            <div class="content">
+              <div class="list-item">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Python, Pygame
+                </div>
+                <div class="second-row">
+                  Three semesters
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Php
+                </div>
+                <div class="second-row">
+                  One semester
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  C++
+                </div>
+                <div class="second-row">
+                  One semester
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Java, JavaFX
+                </div>
+                <div class="second-row">
+                  Two semester
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  C#, Windows forms
+                </div>
+                <div class="second-row">
+                  One semester
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Postgresql
+                </div>
+                <div class="second-row">
+                  Two semester
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Html, Css, JS
+                </div>
+                <div class="second-row">
+                  One semester
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Go, Haskell
+                </div>
+                <div class="second-row">
+                  One semesters
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Swift
+                </div>
+                <div class="second-row">
+                  Two semesters, Bc thesis
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="border: white; width: 300px">
+            <h5 class="list-title">
+              Work
+            </h5>
+            <div class="content">
+              <div class="list-item">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Java, Spring
+                </div>
+                <div class="second-row">
+                  Over a year
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  React.js, Semantic-UI
+                </div>
+                <div class="second-row">
+                  Over a year
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Postgresql
+                </div>
+                <div class="second-row">
+                  Over a year
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="border: white; width: 300px">
+            <h5 class="list-title">
+              Other
+            </h5>
+            <div class="content">
+              <div class="list-item">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Vue.js, Vuetify/Buetify
+                </div>
+                <div class="second-row">
+                  E-shop, a few months
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Express.js
+                </div>
+                <div class="second-row">
+                  E-shop, a few months
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Postgresql
+                </div>
+                <div class="second-row">
+                  E-shop, a few months
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  JavaFX
+                </div>
+                <div class="second-row">
+                  Local network chatting app, a month
+                </div>
+              </div>
+              <div class="list-item border-top">
+                <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
+                <div class="first-row">
+                  Uteg-cli npm package, JS
+                </div>
+                <div class="second-row">
+                   Tracking your working time, occasionally
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <section id="projects" class="">
-    <h3 class="section-title">
+    <h3 class="section-title inverted">
       Projects
     </h3>
     <div class="section-content">
       <div class="card-group">
-
         <div class="card with-cover">
-          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
           <div class="cover acadsys"></div>
-          <h3 class="title">
+          <h2 class="title">
             Acadsys
-          </h3>
+          </h2>
           <h6 class="subtitle">
             Document management system
           </h6>
           <div class="content">
-            project description
+            Documents accessible from anywhere, creating invoices with a wink..
           </div>
           <div class="actions">
             <a href="https://www.acadsys.com" target="_blank" class="button effect-raise filled">
@@ -168,15 +412,14 @@
         </div>
         <div class="card with-cover">
           <div class="cover camasys"></div>
-          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
-          <h3 class="title">
+          <h2 class="title">
             Camasys
-          </h3>
+          </h2>
           <h6 class="subtitle">
-            Car managing system
+            Car management system
           </h6>
           <div class="content">
-            project description
+            Solutions for car rental companies or companies with car fleets..
           </div>
           <div class="actions">
             <a href="https://www.camasys.com" class="button effect-raise">
@@ -185,16 +428,16 @@
           </div>
         </div>
         <div class="card with-cover">
-          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
+          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="gallery">-->
           <div class="cover rentalport"></div>
-          <h3 class="title">
+          <h2 class="title">
             Rentalport
-          </h3>
+          </h2>
           <h6 class="subtitle">
             Online car rental broker
           </h6>
           <div class="content">
-            project description
+            Rent a car for the most affordable price with a few clicks..
           </div>
           <div class="actions">
             <a href="https://www.rentalport.com" class="button effect-raise">
@@ -203,16 +446,16 @@
           </div>
         </div>
         <div class="card with-cover">
-          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="galery">-->
+          <!--          <img class="cover" src="https://source.unsplash.com/random/350x200" alt="gallery">-->
           <div class="cover cybik"></div>
-          <h3 class="title">
+          <h2 class="title">
             Cybik
-          </h3>
+          </h2>
           <h6 class="subtitle">
             Eshop from scratch
           </h6>
           <div class="content">
-            project description
+            Online fashion shop with a sense for detail and simplicity..
           </div>
           <div class="actions">
             <a href="https://www.cybik.sk" class="button effect-raise">
@@ -264,11 +507,11 @@
               <div class="slide slide-2">
                 <div class="grid-container">
                   <h3 class="slide-title">
-                    Why to become a programmer?
+                    Top 5 books to read
                   </h3>
                   <div class="slide-content">
-                    Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
-                    paid for it? That is nothing close to being a programmer like..
+                    Are you one of those people who would like to read something but never know which book to pick up?
+                    Let me introduce you 5 top books I read and found them both, entertaining and useful..
                   </div>
                   <div class="slide-action">
                     <a class="button effect-slide rounded text white">
@@ -280,11 +523,12 @@
               <div class="slide slide-3">
                 <div class="grid-container">
                   <h3 class="slide-title">
-                    Why to become a programmer?
+                    Is travelling on budget really possible?
                   </h3>
                   <div class="slide-content">
-                    Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
-                    paid for it? That is nothing close to being a programmer like..
+                    Not everyone of us likes to travel with travel agencies and some of us even appreciate spending
+                    hours
+                    on planning trips in details. If you have not done backpacking yet, here are some tips..
                   </div>
                   <div class="slide-action">
                     <a class="button effect-slide rounded text white">
@@ -296,11 +540,10 @@
               <div class="slide slide-4">
                 <div class="grid-container">
                   <h3 class="slide-title">
-                    Why to become a programmer?
+                    Study abroad
                   </h3>
                   <div class="slide-content">
-                    Have you ever wished you got a job where u would just sit, watch a couple of youtube videos and get
-                    paid for it? That is nothing close to being a programmer like..
+                    Studying abroad has never been more convenient as it is now. Here is why..
                   </div>
                   <div class="slide-action">
                     <a class="button effect-slide rounded text white">
@@ -316,26 +559,63 @@
     </section>
   </div>
   <section id="gallery" class="">
-    <h3 class="section-title">
-      Galery
+    <h3 class="section-title inverted">
+      Gallery
     </h3>
     <div class="section-content">
       <div id="galleryContent" class="card-group" hidden>
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
-        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="galery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
+        <img class="card raise" src="https://source.unsplash.com/random/200x200" alt="gallery">
       </div>
     </div>
     <h6 class="section-subtitle">
       <a id="toggleGallery" class="button effect-raise" onclick="toggleGallery()">show</a>
     </h6>
   </section>
+  <div class="with-background">
+    <section>
+      <h3 class="section-title">
+        Get to know me
+      </h3>
+      <div class="section-content">
+        <p class="paragraph">
+          I do not like to get bored so I try to fill my free time with learning new things like languages. These days I
+          am mostly focusing on improving my English, however, I also enjoy exploring other languages like German,
+          Russian, and soon Danish. Languages is just one of my curiosities. I would like to a learn a little about
+          everything.
+        </p>
+        <p class="paragraph">
+          As a computer science student, there are times when I have to look away from a screen. In these cases, I will
+          more than likely reach for a book. My literary collection includes works such as:
+          <a href="" target="_blank" style="text-decoration: none; color: firebrick">How to win friends and
+            influence people</a> by Dale Carnegie, <a href="" target="_blank"
+                                                      style="text-decoration: none; color: firebrick">Never split the
+          difference</a> by Chris Voss, <a href="" target="_blank" style="text-decoration: none; color: firebrick">Clean
+          code</a> by
+          Robert C. Martin. You can check out my whole library on <a
+          href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank"
+          style="text-decoration: none; color: firebrick">goodreads.com</a>.
+        </p>
+        <p class="paragraph">
+          Traveling is another one of my passions. Although I have not been traveling for long, I have discovered an
+          appreciation for different cultures around the world. I have had the privilege of meeting new and exciting
+          people who have introduced new ideas and foods to me. I hope to travel to many more countries in the future to
+          broaden my horizons even further.
+        </p>
+        <p class="paragraph">
+          And last but not least, I spend a lot of time hanging out with friends and doing sports like running, working
+          out, swimming, snowboarding, cross-country skiing, beach volleyball, tennis .. pretty much anything :).
+        </p>
+      </div>
+    </section>
+  </div>
   <div id="contact" class="" style="background: black; color: white; padding: 0 1em 3em 1em;">
     <h3 class="section-title">
       Contact
@@ -345,24 +625,26 @@
         Don't hesitate to contact me via social media listed down below!
       </p>
       <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none; padding: .5em">
-        <img src="../assets/icons/facebook.svg" alt="facebook" width="32">
+        <img src="assets/icons/facebook.svg" alt="facebook" width="32">
       </a>
       <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none; padding: .5em">
-        <img src="../assets/icons/gmail.svg" alt="gmail" width="32">
+        <img src="assets/icons/gmail.svg" alt="gmail" width="32">
       </a>
       <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
          style="text-decoration: none; padding: .5em">
-        <img src="../assets/icons/linkedin.svg" alt="linkedin" width="32">
+        <img src="assets/icons/linkedin.svg" alt="linkedin" width="32">
       </a>
     </div>
     <div class="section-content">
       <p style="font-family: 'Chalkduster', fantasy">
-        “If you set your goals ridiculously high and it's a failure,<br> you will fail above everyone else's success.” - James Cameron
+        “If you set your goals ridiculously high and it's a failure,<br> you will fail above everyone else's success.” -
+        James Cameron
       </p>
     </div>
   </div>
 </main>
-<script src="../main.js"></script>
-<script src="../scripts/stars.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/stars.js"></script>
+<script src="scripts/timeline.js"></script>
 </body>
 </html>

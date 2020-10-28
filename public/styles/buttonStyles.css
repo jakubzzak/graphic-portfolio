@@ -1,0 +1,120 @@
+a.button {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    /*width: 120px;*/
+    /*height: 40px;*/
+    background-color: orange;
+    padding: .5em 1.5em;
+    margin: .5em;
+    color: black;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 0 3px;
+    font-family: 'Oswald', sans-serif;
+    line-height: 20px;
+    letter-spacing: 0;
+}
+
+a.button:hover {
+}
+
+/* ====== */
+/* styles */
+/* ====== */
+
+a.button.text {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+a.button.white {
+    color: white;
+}
+
+a.button.outline.white {
+    border: solid white 1px;
+}
+
+a.button.outline.black {
+    border: solid black 1px;
+}
+
+/* size */
+a.button.small {
+    padding: .5em .6em;
+}
+
+a.button.medium {
+    padding: .7em 1em;
+}
+
+a.button.large {
+    padding: .9em 2.5em;
+}
+
+a.button.rounded {
+    border-radius: 30px;
+}
+/* ===== */
+/* types */
+/* ===== */
+
+/* effect-slide */
+a.button.effect-slide {
+    position: relative;
+    z-index: 1;
+    -webkit-transition-delay: 0.2s !important;
+    transition-delay: 0.2s !important;
+    overflow: hidden;
+    color: white;
+    border-color: white;
+}
+a.button.effect-slide:hover {
+    -webkit-transition: color 0.5s  ease-in-out;
+    transition: color 0.5s  ease-in-out;
+}
+a.button.effect-slide:hover,
+a.button.effect-slide.active {
+    color: black;
+}
+a.button.effect-slide::after,
+a.button.effect-slide::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+a.button.effect-slide::after {
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-radius: 30px;
+    background: white;
+}
+a.button.effect-slide:hover::after,
+a.button.effect-slide.active::after {
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    width: 100%;
+}
+:checked + a.button.effect-slide::after,
+a.button.effect-slide.active::after {
+    width: 300%;
+}
+/* effect-raise */
+a.button.effect-raise:hover {
+    box-shadow: 0 0 10px;
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+}

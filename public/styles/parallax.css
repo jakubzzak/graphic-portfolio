@@ -1,0 +1,52 @@
+html {
+    background-image: radial-gradient(ellipse at bottom, #1b2735 20%, #090a0f 100%);
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.star-little {
+    z-index: -999;
+    width: 1px;
+    height: 1px;
+    background: white;
+}
+.star-little:after {
+    z-index: -999;
+    content: " ";
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    background: white;
+}
+
+.star-medium {
+    z-index: -999;
+    width: 2px;
+    height: 2px;
+    background: white;
+}
+.star-medium:after {
+    z-index: -999;
+    content: " ";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+}
+
+.star-large {
+    z-index: -999;
+    width: 2px;
+    height: 2px;
+    background: white;
+}
+.star-large:after {
+    z-index: -999;
+    content: " ";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+}
