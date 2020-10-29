@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="styles/parallax.css"/>
   <link rel="stylesheet" type="text/css" href="styles/timelineStyles.css"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="UTF-8"/>
   <title>jakubzzak</title>
 </head>
 <body>
@@ -27,7 +28,8 @@
   <span class="logo">
     <img id="computer_logo" src="assets/personal/logo.svg" alt="logo" onclick="scrollOnTop()">
   </span>
-  <span id="nick" hidden><a class="chalk inverted" href="https://github.com/jakubzzak" target="_blank">jakubzzak</a></span>
+  <span id="nick" hidden><a class="chalk inverted" href="https://github.com/jakubzzak"
+                            target="_blank">jakubzzak</a></span>
   <span id="navbarComputer" class="navbar">
     <a class="item" onclick="scrollToSection('aboutMe')">About me</a>
     <a class="item" onclick="scrollToSection('timeline')">Timeline</a>
@@ -39,36 +41,42 @@
   </span>
 </div>
 <div id="navMobileMenu" class="nav-mobile">
-  <div class="center">
+  <div id="top-bar" class="center">
     <img src="assets/personal/logo.svg" alt="portrait" width="50">
-    <h3 style="padding: 1em" class="chalk">
+    <h3 class="chalk">
       Jakub Žák
     </h3>
   </div>
-  <p><a onclick="scrollToSection('aboutMe')">About me</a></p>
-  <p><a onclick="scrollToSection('timeline')">Timeline</a></p>
-  <p><a onclick="scrollToSection('experience')">Experience</a></p>
-  <p><a onclick="scrollToSection('projects')">Projects</a></p>
-  <p><a onclick="scrollToSection('blog')">Blog</a></p>
-  <p><a onclick="scrollToSection('gallery')">Gallery</a></p>
-  <p><a onclick="scrollToSection('contact')">Contact</a></p>
+  <div class="cols">
+    <div class="first-column">
+      <p><a onclick="scrollToSection('aboutMe')">About me</a></p>
+      <p><a onclick="scrollToSection('timeline')">Timeline</a></p>
+      <p><a onclick="scrollToSection('experience')">Experience</a></p>
+      <p><a onclick="scrollToSection('projects')">Projects</a></p>
+    </div>
+    <div class="second-column">
+      <p><a onclick="scrollToSection('blog')">Blog</a></p>
+      <p><a onclick="scrollToSection('gallery')">Gallery</a></p>
+      <p><a onclick="scrollToSection('contact')">Contact</a></p>
+    </div>
+  </div>
   <!--  <ul>-->
   <div class="nav-social">
     <div id="nav-social-border"></div>
     <div id="links">
-        <a class="link" href="https://www.facebook.com/jakub.zak.75098" target="_blank">
-          <img src="assets/icons/facebook-transparent.svg" alt="facebook">
-        </a>
-        <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank">
-          <img src="assets/icons/linkedin-transparent.svg" alt="linkedin">
-        </a>
-        <a href="mailto:zak.jakub67@gmail.com">
-          <img src="assets/icons/gmail-transparent.svg" alt="gmail">
-        </a>
-        <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank">
-          <img src="assets/icons/goodreads-transparent.svg" alt="goodreads">
-        </a>
-      </div>
+      <a class="link" href="https://www.facebook.com/jakub.zak.75098" target="_blank">
+        <img src="assets/icons/facebook-transparent.svg" alt="facebook">
+      </a>
+      <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank">
+        <img src="assets/icons/linkedin-transparent.svg" alt="linkedin">
+      </a>
+      <a href="mailto:zak.jakub67@gmail.com">
+        <img src="assets/icons/gmail-transparent.svg" alt="gmail">
+      </a>
+      <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank">
+        <img src="assets/icons/goodreads-transparent.svg" alt="goodreads">
+      </a>
+    </div>
   </div>
   <!--  </ul>-->
 </div>
@@ -86,9 +94,6 @@
       </a>
     </div>
   </div>
-  <section id="empty" class="">
-
-  </section>
   <div class="with-background">
     <section id="aboutMe">
       <h3 class="section-title">
@@ -609,9 +614,6 @@
     </div>
   </section>
 </main>
-<script src="scripts/main.js"></script>
-<script src="scripts/navbar.js"></script>
-<script src="scripts/stars.js"></script>
-<script src="scripts/timeline.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
