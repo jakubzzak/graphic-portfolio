@@ -1,9 +1,15 @@
-let landingScreen = document.getElementById("home")
-// let navIconOpen = document.getElementById("navIconOpen");
-let navMobileMenu = document.getElementById("navMobileMenu");
-let header = document.getElementById("header")
-let portrait = document.getElementById("portrait")
-const nick = document.getElementById("nick")
+const landingScreen = document.getElementById("home")
+const navMobileMenu = document.getElementById("navMobileMenu");
+const portrait = document.getElementById("portrait")
+
+
+// --- init functions ---
+let isMobile = window.innerWidth <= 550;
+// calculate landing page high
+let homeHeight = window.innerHeight;
+landingScreen.style.height = homeHeight + "px";
+portrait.style.paddingTop = homeHeight / 2 - portrait.offsetHeight / 2  + "px"
+// ----------------------
 
 // cut text on mini screen
 if (window.innerWidth < 350) {
@@ -17,9 +23,9 @@ if (window.innerWidth < 350) {
   }
 }
 
-let isMobile = window.innerWidth <= 550;
 window.addEventListener('resize', function () {
   isMobile = window.innerWidth <= 550;
+  restartStars();
 })
 
 window.onscroll = function () {
@@ -28,11 +34,6 @@ window.onscroll = function () {
   }
   toggleTimelineCards();
 };
-
-// calculate landing page high
-let homeHeight = window.innerHeight;
-landingScreen.style.height = homeHeight + "px";
-portrait.style.paddingTop = homeHeight / 2 - portrait.offsetHeight / 2  + "px"
 
 let scrollOnTop = function () {
   window.scrollTo({

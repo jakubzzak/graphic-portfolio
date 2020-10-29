@@ -1,3 +1,9 @@
+const stars = []
+
+// --- init functions ---
+createStars();
+// ----------------------
+
 function createStars() {
   const distanceX = window.screen.width / 2
   const distanceY = window.screen.height / 2
@@ -39,5 +45,9 @@ function createStars() {
     )
   });
 }
-const stars = []
-createStars()
+
+const restartStars = function () {
+  stars.forEach(x => document.body.removeChild(x));
+  stars.splice(0);
+  createStars();
+}

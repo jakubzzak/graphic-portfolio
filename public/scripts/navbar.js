@@ -1,3 +1,5 @@
+const header = document.getElementById("header")
+const nick = document.getElementById("nick")
 let navMobileIconOpen = document.getElementById("nav-mobile-open")
 let navMobileIconClose = document.getElementById("nav-mobile-close")
 let cover = document.getElementById("mobile-nav-dimmer")
