@@ -8,13 +8,11 @@ let timelineCards = document.getElementsByClassName("timeline-card")
 const initTimelineCards = () => {
   for (let i = 0; i < timelineCards.length; i++) {
     const card = timelineCards[i]
-    console.log('check', card.getBoundingClientRect().top, window.innerHeight)
     const bottom_of_object = card.getBoundingClientRect().top + card.offsetHeight;
     const bottom_of_window = window.pageYOffset + window.innerHeight;
 
     if (bottom_of_object > bottom_of_window) {
       card.classList.add("hidden");
-      console.log('mam hidden')
     }
   }
 }
@@ -142,7 +140,6 @@ const createStars = () => {
   }
   // Keyframes
   stars.forEach((el, i, ra) => {
-    // console.log('size', window.screen.width)
     let to = {
       x: Math.random() * (Math.floor((Math.random() + 1) * 2) % 2 === 0 ? -distanceX : distanceX),
       y: Math.random() * (Math.floor((Math.random() + 1) * 2) % 2 === 0 ? -distanceY : distanceY)
