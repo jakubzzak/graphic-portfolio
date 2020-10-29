@@ -50,7 +50,7 @@ const toggleNav = () => {
 
   // Check if sidebar is closed
   if (sidebarIsClosed) {
-    navMobileIconOpen.style.display = "none";
+    navMobileIconOpen.style.visibility = "hidden";
 
     navMobileMenu.focus();
     // getSidebarUl.style.visibility = "visible";
@@ -66,11 +66,11 @@ const toggleNav = () => {
     }
 
     setTimeout(() => {
-      navMobileIconClose.style.display = "flex";
+      navMobileIconClose.style.visibility = "visible";
       cover.style.display = "flex"
-    }, 500)
+    }, 1000)
   } else {
-    navMobileIconClose.style.display = "none";
+    navMobileIconClose.style.visibility = "hidden";
 
     getSidebar.style.width = "0";
     getSidebar.style.top = "100%";
@@ -84,19 +84,19 @@ const toggleNav = () => {
     }
 
     setTimeout(() => {
-      navMobileIconOpen.style.display = "flex";
+      navMobileIconOpen.style.visibility = "visible";
       cover.style.display = "none"
-    }, 500)
+    }, 1000)
   }
 
   sidebarIsClosed = !sidebarIsClosed;
 }
 
 // header dense
-const denseHeader = () => {
+const denseHeader = (explicit=false) => {
   const pcNavbar = document.getElementById("navbarComputer");
   const logo = document.getElementById("computer_logo");
-  if (window.pageYOffset > homeHeight - header.offsetHeight || document.documentElement.scrollTop > homeHeight - header.offsetHeight) {
+  if (explicit || (window.pageYOffset > homeHeight - header.offsetHeight || document.documentElement.scrollTop > homeHeight - header.offsetHeight)) {
     // dense
     header.style.padding = '.5em';
     logo.style.width = '30px';
@@ -122,8 +122,8 @@ const denseHeader = () => {
 const stars = []
 
 const createStars = () => {
-  const distanceX = window.screen.width / 2
-  const distanceY = window.screen.height / 2
+  const distanceX = window.screen.width / 2;
+  const distanceY = isMobileLandscape ? window.screen.height:window.screen.height / 2;
   for (let i=0; i<200; i++) {
     const star = document.createElement("div")
     star.classList.add('star-little')
@@ -220,9 +220,10 @@ const adjustHomePage = () => {
 }
 
 // --- init functions ---
-console.log('orient', screen.orientation)
 let isMobileLandscape = window.innerHeight < 400 && window.innerWidth < 900;
-let isMobile = !isMobileLandscape && window.innerWidth <= 550;
+let isMobile = !isMobileLandscape && window.innerWidth <= 600;
+let isAlwaysDense = !isMobile && !isMobileLandscape && window.innerWidth < 770;
+let isDense = false;
 // calculate landing page high
 adjustHomePage();
 createStars();
@@ -232,15 +233,20 @@ cutLongText();
 
 window.onresize = () => {
   isMobileLandscape = window.innerHeight < 400 && window.innerWidth < 900;
-  isMobile = !isMobileLandscape && window.innerWidth <= 550;
+  isMobile = !isMobileLandscape && window.innerWidth <= 600;
+  isAlwaysDense = !isMobile && !isMobileLandscape && window.innerWidth < 770;
+  isDense = false;
   restartStars();
   adjustHomePage();
   cutLongText();
 };
 
 window.onscroll = () => {
-  if (!isMobile && !isMobileLandscape) {
+  if (!isMobile && !isMobileLandscape && !isAlwaysDense) {
     denseHeader();
+  } else if (isAlwaysDense && !isDense) {
+    denseHeader(true);
+    isDense = true;
   }
   toggleTimelineCards();
 };

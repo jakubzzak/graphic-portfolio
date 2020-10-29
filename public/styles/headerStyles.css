@@ -27,7 +27,7 @@
 
 #nav-mobile-open,
 #nav-mobile-close {
-    display: none;
+    visibility: hidden;
     position: fixed;
     bottom: 25px;
     right: 25px;
@@ -126,19 +126,29 @@
 #navMobileMenu #top-bar h3 {
     padding: 1em;
 }
-
-@media screen and (max-width: 600px) and (min-width: 550px) {
+@media screen and (max-width: 770px) {
+    #navbarComputer {
+        font-size: 13px;
+    }
+    #computer_logo {
+        width: 30px;
+    }
+    #header {
+        padding: .5em;
+    }
+}
+@media screen and (max-width: 690px) and (min-width: 550px) {
     #nick {
         display: none;
     }
 }
-@media screen and (max-width: 550px), (max-width: 900px) and (max-height: 400px) {
+@media screen and (max-width: 600px), (max-width: 900px) and (max-height: 400px) {
     #navbarComputer {
         display: none;
         font-size: 13px;
     }
     #nav-mobile-open {
-        display: flex;
+        visibility: visible;
     }
     #nick {
         display: grid;

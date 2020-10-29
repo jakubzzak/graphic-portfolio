@@ -127,12 +127,11 @@
     #timeline ul li .timeline-card {
         width: 38vw;
     }
-
     #timeline ul li:nth-child(even) .timeline-card {
-        /*left: calc(-41vw - 70px);*/
+        left: calc(-38vw - 80px);
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 730px) {
     #timeline ul li {
         margin-left: 20px;
     }
