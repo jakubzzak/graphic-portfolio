@@ -3,14 +3,6 @@ const navMobileMenu = document.getElementById("navMobileMenu");
 const portrait = document.getElementById("portrait")
 
 
-// --- init functions ---
-let isMobile = window.innerWidth <= 550;
-// calculate landing page high
-let homeHeight = window.innerHeight;
-landingScreen.style.height = homeHeight + "px";
-portrait.style.paddingTop = homeHeight / 2 - portrait.offsetHeight / 2  + "px"
-// ----------------------
-
 // cut text on mini screen
 if (window.innerWidth < 350) {
   const slideItems = document.getElementsByClassName("slide-content")
@@ -22,18 +14,6 @@ if (window.innerWidth < 350) {
     }
   }
 }
-
-window.addEventListener('resize', function () {
-  isMobile = window.innerWidth <= 550;
-  restartStars();
-})
-
-window.onscroll = function () {
-  if (!isMobile) {
-    denseHeader();
-  }
-  toggleTimelineCards();
-};
 
 let scrollOnTop = function () {
   window.scrollTo({
@@ -63,3 +43,28 @@ const toggleGallery = function () {
     scrollToSection("gallery")
   }
 }
+
+const adjustHomePage = function () {
+  let homeHeight = window.innerHeight;
+  landingScreen.style.height = homeHeight + "px";
+  portrait.style.paddingTop = homeHeight / 2 - portrait.offsetHeight / 2  + "px"
+}
+
+// --- init functions ---
+let isMobile = window.innerWidth <= 550;
+// calculate landing page high
+adjustHomePage();
+// ----------------------
+
+window.addEventListener('resize', function () {
+  isMobile = window.innerWidth <= 550;
+  restartStars();
+  adjustHomePage();
+})
+
+window.onscroll = function () {
+  if (!isMobile) {
+    denseHeader();
+  }
+  toggleTimelineCards();
+};
