@@ -2,60 +2,36 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/headerStyles.css"/>
   <link rel="stylesheet" type="text/css" href="styles/cardStyles.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/listStyles.css"/>
   <link rel="stylesheet" type="text/css" href="styles/buttonStyles.css"/>
   <link rel="stylesheet" type="text/css" href="styles/blogStyles.css"/>
   <link rel="stylesheet" type="text/css" href="styles/parallax.css"/>
-  <link rel="stylesheet" type="text/css" href="styles/timeline.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/timelineStyles.css"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>jakubzzak</title>
 </head>
 <body>
-<div id="nav-cover"
-     style="
-		 	position: fixed;
-		  	top: 0;
-		   	right: 0;
-			bottom: 0;
-		 	left: 0;
-		  	background: black;
-		   	z-index: 999;
-		   	display: none;
-		   	opacity: .9;
-		">
-
+<div id="mobile-nav-dimmer" onclick="toggleNav()"></div>
+<div id="nav-mobile-open">
+  <img src="assets/icons/nav-mobile-icon_black-bg.svg"
+       onclick="toggleNav()" alt="">
 </div>
-<div id="nav-mobile-open"
-     style="
-		 	position: fixed;
-		 	bottom: 25px;
-		 	right: 25px;
-		 	z-index: 1000;
-		 	cursor:pointer;
-			">
-  <img style="border-radius: 5px; border: solid white 1px" src="assets/icons/nav-mobile-icon_black-bg.svg"
-       onclick="toggleNav()">
+<div id="nav-mobile-close">
+  <img src="assets/icons/close_nav-mobile-icon_transparent-black.svg" alt="close_icon" onclick="toggleNav()">
 </div>
 
-<div id="nav-mobile-close"
-     style="
-		 	position: fixed;
-		 	bottom: 25px;
-		 	right: 25px;
-		 	z-index: 1000;
-		 	cursor:pointer;
-			">
-  <img src="assets/icons/close_nav-mobile-icon_transparent-black.svg" onclick="toggleNav()">
-</div>
 
 <div id="header">
   <span class="logo">
-    <img id="computer_logo" src="assets/personal/logo.svg" onclick="scrollOnTop()" style="cursor: pointer">
+    <img id="computer_logo" src="assets/personal/logo.svg" alt="logo" onclick="scrollOnTop()">
   </span>
-  <span id="nick" hidden>jakubzzak</span>
-  <span id="navbarComputer" class="navbar computer">
+  <span id="nick" hidden><a class="chalk inverted" href="https://github.com/jakubzzak" target="_blank">jakubzzak</a></span>
+  <span id="navbarComputer" class="navbar">
     <a class="item" onclick="scrollToSection('aboutMe')">About me</a>
     <a class="item" onclick="scrollToSection('timeline')">Timeline</a>
+    <a class="item" onclick="scrollToSection('experience')">Experience</a>
     <a class="item" onclick="scrollToSection('projects')">Projects</a>
     <a class="item" onclick="scrollToSection('blog')">Blog</a>
     <a class="item" onclick="scrollToSection('gallery')">Gallery</a>
@@ -63,38 +39,38 @@
   </span>
 </div>
 <div id="navMobileMenu" class="nav-mobile">
-  <div style="right: 0; left: 0; text-align: center">
-    <img src="assets/personal/logo.svg" alt="portrait" width="150">
-    <h3 style="padding: 1em" class="">
+  <div class="center">
+    <img src="assets/personal/logo.svg" alt="portrait" width="50">
+    <h3 style="padding: 1em" class="chalk">
       Jakub Žák
     </h3>
   </div>
   <p><a onclick="scrollToSection('aboutMe')">About me</a></p>
-  <p><a onclick="scrollToSection('timeline')">timeline</a></p>
+  <p><a onclick="scrollToSection('timeline')">Timeline</a></p>
+  <p><a onclick="scrollToSection('experience')">Experience</a></p>
   <p><a onclick="scrollToSection('projects')">Projects</a></p>
   <p><a onclick="scrollToSection('blog')">Blog</a></p>
   <p><a onclick="scrollToSection('gallery')">Gallery</a></p>
   <p><a onclick="scrollToSection('contact')">Contact</a></p>
-  <ul>
-    <li class="nav-social">
-      <div id="nav-social-border"></div>
-      <span style="padding-top: 1em">
-        <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none">
-          <img src="assets/icons/facebook-transparent.svg" alt="facebook" width="24">
+  <!--  <ul>-->
+  <div class="nav-social">
+    <div id="nav-social-border"></div>
+    <div id="links">
+        <a class="link" href="https://www.facebook.com/jakub.zak.75098" target="_blank">
+          <img src="assets/icons/facebook-transparent.svg" alt="facebook">
         </a>
-        <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
-           style="text-decoration: none">
-          <img src="assets/icons/linkedin-transparent.svg" alt="linkedin" width="24">
+        <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank">
+          <img src="assets/icons/linkedin-transparent.svg" alt="linkedin">
         </a>
-        <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none">
-          <img src="assets/icons/gmail-transparent.svg" alt="gmail" width="24">
+        <a href="mailto:zak.jakub67@gmail.com">
+          <img src="assets/icons/gmail-transparent.svg" alt="gmail">
         </a>
-        <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank" style="text-decoration: none">
-          <img src="assets/icons/goodreads-transparent.svg" alt="goodreads" width="24">
+        <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank">
+          <img src="assets/icons/goodreads-transparent.svg" alt="goodreads">
         </a>
-      </span>
-    </li>
-  </ul>
+      </div>
+  </div>
+  <!--  </ul>-->
 </div>
 <main id="main">
   <div id="home" class="portrait">
@@ -104,19 +80,9 @@
     <h1 class="" style="font-family: 'Chalkduster', fantasy">
       Jakub Žák
     </h1>
-    <div class="social">
-      <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none">
-        <img src="assets/icons/facebook-transparent.svg" alt="facebook" width="32">
-      </a>
-      <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
-         style="text-decoration: none">
-        <img src="assets/icons/linkedin-transparent.svg" alt="linkedin" width="32">
-      </a>
-      <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none">
-        <img src="assets/icons/gmail-transparent.svg" alt="gmail" width="32">
-      </a>
-      <a href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank" style="text-decoration: none">
-        <img src="assets/icons/goodreads-transparent.svg" alt="goodreads" width="32">
+    <div class="center">
+      <a href="https://github.com/jakubzzak" target="_blank">
+        <img src="assets/icons/github.svg" alt="jakubzzak" width="42">
       </a>
     </div>
   </div>
@@ -129,7 +95,7 @@
         Hey!
       </h3>
       <div class="section-content">
-        <p>My name is Jakub Zak and I am a technology enthusiast based in Bratislava, Slovakia. Currently, I am working
+        <p>My name is Jakub Žák and I am a technology enthusiast based in Bratislava, Slovakia. Currently, I am working
           as a junior software developer for <a href='https://www.uteg.sk/'>UnitedTechnologies</a>. Please feel free to
           check out my work below and reach out to me with any questions or comments you may have.
         </p>
@@ -173,7 +139,7 @@
         <li>
           <div class="timeline-card">
             <h2>
-              Work and travel program
+              Work and travel USA
             </h2>
             <h5>
               <time>June - September, 2019</time>
@@ -203,13 +169,13 @@
 
 
   <div class="with-background">
-    <section id="experience" class="">
+    <section id="experience">
       <h3 class="section-title">
         Experience
       </h3>
       <div class="section-content">
         <div class="card-group">
-          <div class="card" style="border: white; width: 300px">
+          <div class="card list">
             <h5 class="list-title">
               School
             </h5>
@@ -297,7 +263,7 @@
               </div>
             </div>
           </div>
-          <div class="card" style="border: white; width: 300px">
+          <div class="card list">
             <h5 class="list-title">
               Work
             </h5>
@@ -331,21 +297,21 @@
               </div>
             </div>
           </div>
-          <div class="card" style="border: white; width: 300px">
+          <div class="card list">
             <h5 class="list-title">
               Other
             </h5>
-            <div class="content">
-              <div class="list-item">
+            <ul class="content">
+              <li class="list-item">
                 <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
                 <div class="first-row">
-                  Vue.js, Vuetify/Buetify
+                  Vue.js, Vuetify/Buefy
                 </div>
                 <div class="second-row">
                   E-shop, a few months
                 </div>
-              </div>
-              <div class="list-item border-top">
+              </li>
+              <li class="list-item border-top">
                 <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
                 <div class="first-row">
                   Express.js
@@ -353,8 +319,8 @@
                 <div class="second-row">
                   E-shop, a few months
                 </div>
-              </div>
-              <div class="list-item border-top">
+              </li>
+              <li class="list-item border-top">
                 <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
                 <div class="first-row">
                   Postgresql
@@ -362,26 +328,26 @@
                 <div class="second-row">
                   E-shop, a few months
                 </div>
-              </div>
-              <div class="list-item border-top">
+              </li>
+              <li class="list-item border-top">
                 <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
                 <div class="first-row">
                   JavaFX
                 </div>
                 <div class="second-row">
-                  Local network chatting app, a month
+                  Chatting app, a month
                 </div>
-              </div>
-              <div class="list-item border-top">
+              </li>
+              <li class="list-item border-top">
                 <img class="row-indent" src="assets/icons/hand_indent.svg" alt="indent"/>
                 <div class="first-row">
-                  Uteg-cli npm package, JS
+                  Node.js
                 </div>
                 <div class="second-row">
-                   Tracking your working time, occasionally
+                  Npm package, occasionally
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -594,14 +560,14 @@
         <p class="paragraph">
           As a computer science student, there are times when I have to look away from a screen. In these cases, I will
           more than likely reach for a book. My literary collection includes works such as:
-          <a href="" target="_blank" style="text-decoration: none; color: firebrick">How to win friends and
+          <a href="" target="_blank" style="color: firebrick">How to win friends and
             influence people</a> by Dale Carnegie, <a href="" target="_blank"
-                                                      style="text-decoration: none; color: firebrick">Never split the
-          difference</a> by Chris Voss, <a href="" target="_blank" style="text-decoration: none; color: firebrick">Clean
+                                                      style="color: firebrick">Never split the
+          difference</a> by Chris Voss, <a href="" target="_blank" style="color: firebrick">Clean
           code</a> by
           Robert C. Martin. You can check out my whole library on <a
           href="https://www.goodreads.com/user/show/41121845-jakub-k" target="_blank"
-          style="text-decoration: none; color: firebrick">goodreads.com</a>.
+          style="color: firebrick">goodreads.com</a>.
         </p>
         <p class="paragraph">
           Traveling is another one of my passions. Although I have not been traveling for long, I have discovered an
@@ -616,7 +582,7 @@
       </div>
     </section>
   </div>
-  <div id="contact" class="" style="background: black; color: white; padding: 0 1em 3em 1em;">
+  <section id="contact" class="inverted">
     <h3 class="section-title">
       Contact
     </h3>
@@ -624,26 +590,27 @@
       <p>
         Don't hesitate to contact me via social media listed down below!
       </p>
-      <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="text-decoration: none; padding: .5em">
+      <a href="https://www.facebook.com/jakub.zak.75098" target="_blank" style="padding: .5em">
         <img src="assets/icons/facebook.svg" alt="facebook" width="32">
       </a>
-      <a href="mailto:zak.jakub67@gmail.com" style="text-decoration: none; padding: .5em">
+      <a href="mailto:zak.jakub67@gmail.com" style="padding: .5em">
         <img src="assets/icons/gmail.svg" alt="gmail" width="32">
       </a>
       <a href="https://www.linkedin.com/in/jakub-%C5%BE%C3%A1k-6b02701a0/" target="_blank"
-         style="text-decoration: none; padding: .5em">
+         style="padding: .5em">
         <img src="assets/icons/linkedin.svg" alt="linkedin" width="32">
       </a>
     </div>
     <div class="section-content">
-      <p style="font-family: 'Chalkduster', fantasy">
-        “If you set your goals ridiculously high and it's a failure,<br> you will fail above everyone else's success.” -
+      <p class="chalk">
+        “If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.” -
         James Cameron
       </p>
     </div>
-  </div>
+  </section>
 </main>
 <script src="scripts/main.js"></script>
+<script src="scripts/navbar.js"></script>
 <script src="scripts/stars.js"></script>
 <script src="scripts/timeline.js"></script>
 </body>

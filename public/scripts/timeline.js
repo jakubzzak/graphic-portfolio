@@ -1,30 +1,27 @@
-/* Check the location of each element */
 let timelineCards = document.getElementsByClassName("timeline-card")
 
 
 for(let i=0; i < timelineCards.length; i++) {
   const card = timelineCards[i]
-  const bottom_of_object= card.offsetTop + card.outerHeight;
+  console.log('check', card.getBoundingClientRect().top, window.innerHeight)
+  const bottom_of_object = card.getBoundingClientRect().top + card.offsetHeight;
   const bottom_of_window = window.pageYOffset + window.innerHeight;
 
-  if( bottom_of_object > bottom_of_window){
-    card.classList.add('hidden');
+  if( bottom_of_object > bottom_of_window ){
+    card.classList.add("hidden");
+    console.log('mam hidden')
   }
 }
 
-const revealHiddenTimelineCards = function() {
-  /* Check the location of each element hidden */
+const toggleTimelineCards = function() {
+  const diff = 150;
   for(let i=0; i < timelineCards.length; i++) {
-  console.log('timeline card test =>', window.pageYOffset, window.innerHeight)
     const card = timelineCards[i]
-
-    const bottom_of_object = card.offsetTop + card.outerHeight;
-    const bottom_of_window = window.pageYOffset + window.innerHeight;
-
-    /* If the object is completely visible in the window, fadeIn it */
-    if( bottom_of_window > bottom_of_object ){
-      card.animate({'opacity':'1'},700);
-      timelineCards.splice(i, 1)
+    const cardsPositionFromTop = card.getBoundingClientRect().top;
+    if (card.classList.contains("hidden") && cardsPositionFromTop < 450 + diff && cardsPositionFromTop + card.offsetHeight /2 > 0) {
+      card.classList.remove("hidden")
+    } else if (!card.classList.contains("hidden") && (cardsPositionFromTop + card.offsetHeight + diff < 0 || cardsPositionFromTop - diff > window.pageYOffset)) {
+      card.classList.add("hidden");
     }
   }
 }

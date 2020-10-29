@@ -1,0 +1,154 @@
+/* header */
+#header {
+    display: grid;
+    padding: 1em;
+    background: #000;
+    color: #fff;
+    transition: all 1s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+}
+
+.navbar {
+    margin: auto 1em;
+    padding: .5em;
+}
+
+.navbar .item {
+    margin: auto 1em;
+    text-align: center;
+}
+.navbar .item:last-child {
+    margin-right: 0;
+}
+
+#nav-mobile-open,
+#nav-mobile-close {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    cursor:pointer;
+}
+#nav-mobile-open img,
+#nav-mobile-close img {
+    border-radius: 5px;
+    border: solid white 1px;
+}
+
+.nav-mobile {
+    position: fixed;
+    right: 0;
+    top: 100%;
+    bottom: 0;
+    width: 0;
+    background-color: white;
+    z-index: 999;
+    transition: all .8s ease-in-out;
+}
+
+.nav-mobile ul {
+    overflow: hidden;
+}
+
+.nav-mobile ul li {
+    list-style: none;
+}
+
+.nav-social {
+    position: absolute;
+    bottom: 70px;
+    text-align: center;
+    left: 5px;
+    right: 5px;
+}
+#nav-social-border {
+    border-top: black solid 2px;
+    padding-bottom: 1em;
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 30px;
+}
+#links {
+
+}
+.nav-social .link {
+    margin: 0;
+    padding: 0;
+}
+.nav-social img {
+    margin: 0;
+    padding: 0;
+    width: 12px;
+    /*outline: solid black 1px;*/
+}
+
+#navbarComputer {
+    transition: all 1.5s ease-in-out;
+    grid-column: 5/25;
+    text-align: right;
+    /*background-color: red;*/
+}
+
+#nick {
+    transition: all 3s ease-in-out;
+    text-align: left;
+    margin: auto 0;
+    grid-column: 2;
+    /*background-color: green;*/
+}
+
+#computer_logo {
+    cursor: pointer;
+    margin-left: 1em;
+    width: 50px;
+}
+
+#mobile-nav-dimmer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    z-index: 999;
+    display: none;
+    opacity: .9;
+}
+
+.logo {
+    grid-column: 1;
+    /*background-color: yellow;*/
+}
+
+@media screen and (max-width: 600px) and (min-width: 550px) {
+    #nick {
+        display: none;
+    }
+}
+@media screen and (max-width: 550px) {
+    #navbarComputer {
+        display: none;
+        font-size: 13px;
+    }
+    #nav-mobile-open {
+        display: flex;
+    }
+    #nick {
+        display: grid;
+        text-align: right;
+        visibility: visible;
+        margin-right: 1em;
+    }
+    #computer_logo {
+        width: 30px;
+    }
+    #header {
+        padding: .5em;
+    }
+}

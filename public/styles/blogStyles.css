@@ -145,6 +145,6 @@ input[type="radio"]:checked+label.btn::after {
     align-self: center;
     /*background-color: green;*/
     padding: .5em 2em 0 2em;
-    grid-column: 3/6;
+    grid-column: 2/6;
     text-align: right;
 }
