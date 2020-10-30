@@ -1,6 +1,9 @@
 const landingScreen = document.getElementById("home")
 const portrait = document.getElementById("portrait")
-let homeHeight = window.innerHeight;
+let dimensions = {
+  height: window.innerHeight,
+  width: window.innerWidth
+}
 
 // --- timeline ---
 let timelineCards = document.getElementsByClassName("timeline-card")
@@ -94,7 +97,7 @@ const toggleNav = () => {
 const denseHeader = (explicit=false) => {
   const pcNavbar = document.getElementById("navbarComputer");
   const logo = document.getElementById("computer_logo");
-  if (explicit || (window.pageYOffset > homeHeight - header.offsetHeight || document.documentElement.scrollTop > homeHeight - header.offsetHeight)) {
+  if (explicit || (window.pageYOffset > dimensions.height - header.offsetHeight || document.documentElement.scrollTop > dimensions.height - header.offsetHeight)) {
     // dense
     header.style.padding = '.5em';
     logo.style.width = '30px';
@@ -102,7 +105,7 @@ const denseHeader = (explicit=false) => {
     pcNavbar.style.fontSize = '13px';
 
     setTimeout(() => {
-      if (window.pageYOffset > homeHeight - header.offsetHeight || document.documentElement.scrollTop > homeHeight - header.offsetHeight) {
+      if (window.pageYOffset > dimensions.height - header.offsetHeight || document.documentElement.scrollTop > dimensions.height - header.offsetHeight) {
         nick.hidden = false;
       }
     }, 1500)
@@ -120,8 +123,8 @@ const denseHeader = (explicit=false) => {
 const stars = []
 
 const createStars = () => {
-  const distanceX = window.screen.width / 2;
-  const distanceY = isMobileLandscape ? window.screen.height:window.screen.height / 2;
+  const distanceX = dimensions.width / 2;
+  const distanceY = isMobileLandscape ? dimensions.height:dimensions.height / 2;
   for (let i=0; i<200; i++) {
     const star = document.createElement("div")
     star.classList.add('star-little')
@@ -211,7 +214,6 @@ const toggleGallery = () => {
 }
 
 const adjustHomePage = () => {
-  homeHeight = window.innerHeight;
   portrait.style.paddingTop =  "30vh";
   landingScreen.style.height = isMobileLandscape ? "170vh":"100vh";
 }
@@ -233,9 +235,14 @@ window.onresize = () => {
   isMobile = !isMobileLandscape && window.innerWidth <= 600;
   isAlwaysDense = !isMobile && !isMobileLandscape && window.innerWidth < 770;
   isDense = false;
-  restartStars();
-  adjustHomePage();
-  cutLongText();
+
+  if (dimensions.width !== window.innerWidth) {
+    dimensions.height = window.innerHeight;
+    dimensions.width = window.innerWidth;
+    restartStars();
+    adjustHomePage();
+    cutLongText();
+  }
 };
 
 window.onscroll = () => {
