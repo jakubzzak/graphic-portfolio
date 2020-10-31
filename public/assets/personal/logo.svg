@@ -13,7 +13,10 @@
    version="1.1"
    id="SVGRoot"
    sodipodi:docname="logo.svg"
-   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   inkscape:export-filename="/Users/jakubzzak/Developer/web-graphics-portfolio/public/assets/personal/logo128x128_white.png"
+   inkscape:export-xdpi="256"
+   inkscape:export-ydpi="256">
   <defs
      id="defs982">
     <inkscape:path-effect
@@ -92,8 +95,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="10.985333"
-     inkscape:cx="-4.8559526"
-     inkscape:cy="21.886621"
+     inkscape:cx="10.073044"
+     inkscape:cy="24.226306"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -115,7 +118,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
