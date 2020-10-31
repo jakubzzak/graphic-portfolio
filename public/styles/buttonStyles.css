@@ -1,11 +1,9 @@
 a.button {
     text-decoration: none;
-    cursor: pointer;
+    font-family: 'Arial Narrow', sans-serif;
     font-size: 16px;
     border-radius: 6px;
-    /*width: 120px;*/
-    /*height: 40px;*/
-    background-color: orange;
+    background-color: #ffa500;
     padding: .5em 1.5em;
     margin: .5em;
     color: black;
@@ -15,12 +13,18 @@ a.button {
     -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 0 3px;
-    font-family: 'Oswald', sans-serif;
     line-height: 20px;
     letter-spacing: 0;
 }
 
 a.button:hover {
+}
+
+a.ref {
+  color: #b22222;
+}
+a.space-around {
+    padding: .5em;
 }
 
 /* ====== */

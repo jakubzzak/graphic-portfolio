@@ -2,7 +2,6 @@
     position: relative;
     margin: 0;
     padding: 0;
-    /*border: solid red 1px;*/
     text-align: center;
 }
 
@@ -14,7 +13,6 @@
     min-height: 200px;
     background-color: #fff;
     border-radius: 6px;
-    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);*/
     -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: solid black 1px;
@@ -65,9 +63,7 @@
     height: 200px;
 }
 .acadsys {
-    /*background-image: url("assets/acadsys.png");*/
     background: url("../assets/personal/acadsys.png") center/cover no-repeat;
-    /*background-size: contain;*/
 }
 .camasys {
     background: url("../assets/personal/camasys.png") center/cover no-repeat;
@@ -76,25 +72,28 @@
     background: url("../assets/personal/rentalport.png") center/cover no-repeat;
 }
 .cybik {
-    background: url("../assets/personal/rentalport.png") center/cover no-repeat;
+    background: url("../assets/personal/cybik.png") center/cover no-repeat;
 }
 
 .card .title {
+    font-family: "Chalkduster", fantasy;
+    font-size: 20px;
     padding: .5em .5em 0 .5em;
     margin: 0;
-    /*border-bottom: solid black 1px;*/
     text-align: left;
 }
 
 .card .subtitle {
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 15px;
     color: grey;
     padding: .5em .5em 0 1em;
     margin: 0;
     text-align: left;
-    font-size: 15px;
 }
 
 .card .content {
+    font-size: 14px;
     padding: 1em;
     margin: 0;
     text-align: left;
@@ -109,6 +108,5 @@
     bottom: 0;
     left: 0;
     right: 0;
-    /*height: 80px;*/
     text-align: right;
 }

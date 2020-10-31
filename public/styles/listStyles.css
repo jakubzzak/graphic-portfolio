@@ -1,6 +1,6 @@
 .list {
-    border: white;
     max-width: 300px;
+    border: white;
 }
 @media screen and (max-width: 375px){
     .list {
@@ -11,14 +11,14 @@
 }
 .list-title {
     font-family: 'Chalkduster', fantasy;
-    text-align: left;
+    font-size: 15px;
     padding: 1em 1em 0 1em;
     margin: 0;
+    text-align: left;
 }
 .list-item {
     padding: .5em 0;
     display: grid;
-    /*border: solid blue 1px;*/
 }
 .list-item {
     border-bottom: solid black 1px;
@@ -28,35 +28,31 @@
 }
 
 .list-item .row-indent {
-    grid-row: 1/2;
-    grid-column: 1/2;
-    text-align: left;
-    margin: auto 1em auto 0;
     padding: .5em;
+    margin: auto 1em auto 0;
     width: 20px;
-    /*background-color: greenyellow;*/
     height: 100%;
     max-height: 25px;
+    text-align: left;
+    grid-row: 1/2;
+    grid-column: 1/2;
 }
 .list-item .first-row {
+    padding: 0;
+    margin: auto;
+    width: 220px;
+    position: relative;
+    align-self: start;
+    text-align: left;
     grid-row: 1;
     grid-column: 3/4;
-    margin: auto;
-    position: relative;
-    width: 220px;
-    text-align: left;
-    align-self: start;
-    padding: 0;
-    /*background-color: yellow;*/
 }
 .list-item .second-row {
+    padding: 0;
+    margin: 0;
     color: grey;
+    text-align: left;
     grid-row: 2;
     grid-column: 3/4;
-    margin: 0;
-    /*width: 100%;*/
     text-indent: 15px;
-    text-align: left;
-    padding: 0;
-    /*background-color: red;*/
 }

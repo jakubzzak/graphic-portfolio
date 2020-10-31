@@ -20,6 +20,7 @@
 .navbar .item {
     margin: auto 1em;
     text-align: center;
+    font-family: "Arial Narrow", sans-serif;
 }
 .navbar .item:last-child {
     margin-right: 0;

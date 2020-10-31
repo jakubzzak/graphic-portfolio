@@ -214,12 +214,12 @@ const toggleGallery = () => {
 }
 
 const adjustHomePage = () => {
-  portrait.style.paddingTop =  "30vh";
-  landingScreen.style.height = isMobileLandscape ? "170vh":"100vh";
+  portrait.style.paddingTop = isMobileLandscape ? "40vh":"30vh";
+  landingScreen.style.height = isMobileLandscape ? "160vh":"100vh";
 }
 
 // --- init functions ---
-let isMobileLandscape = window.innerHeight < 400 && window.innerWidth < 900;
+let isMobileLandscape = window.innerHeight < 415 && window.innerWidth < 900;
 let isMobile = !isMobileLandscape && window.innerWidth <= 600;
 let isAlwaysDense = !isMobile && !isMobileLandscape && window.innerWidth < 770;
 let isDense = false;

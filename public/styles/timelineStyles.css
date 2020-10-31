@@ -24,8 +24,8 @@
 }
 #timeline ul li {
     background: #67CC8E;
-    position: relative;
     margin: 0 auto;
+    position: relative;
     width: 5px;
     padding-bottom: 40px;
     list-style-type: none;
@@ -80,21 +80,18 @@
 #timeline ul li .timeline-card h2 {
     color: #fff;
     font-family: Chalkduster, fantasy;
+    font-size: 20px;
     text-align: center;
     margin: 0 auto .3em auto;
-
-    /*border: solid red 1px;*/
 }
 #timeline ul li .timeline-card h5 {
     color: #fff;
     text-align: center;
     margin: 0 auto;
-    /*border: solid red 1px;*/
 }
 #timeline ul li .timeline-card p {
     text-align: center;
     margin: 2em auto 0 auto;
-    /*border: solid red 1px;*/
 }
 #timeline ul li .timeline-card:before {
     content: '';
@@ -142,7 +139,6 @@
     #timeline ul li .timeline-card h5,
     #timeline ul li .timeline-card h2 {
         text-align: left;
-        /*text-align: initial;*/
     }
     #timeline ul li:nth-child(even) .timeline-card {
         left: 45px;
